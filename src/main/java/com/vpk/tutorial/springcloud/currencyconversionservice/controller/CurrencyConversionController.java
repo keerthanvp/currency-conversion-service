@@ -13,7 +13,7 @@ public class CurrencyConversionController {
     @Autowired
     private CurrencyConversionService currencyConversionService;
 
-    @GetMapping("/currency-exchange/from/{from}/to/{to}/quantity/{quantity}")
+    @GetMapping("/currency-conversion/from/{from}/to/{to}/quantity/{quantity}")
     public CurrencyConversion convert(@PathVariable String from, @PathVariable String to,
                                       @PathVariable Double quantity){
         return currencyConversionService.convert(from, to, quantity);
